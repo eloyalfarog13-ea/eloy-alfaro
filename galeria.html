@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería - Grupo Scout #13 Eloy Alfaro</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Menú de Navegación -->
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="window.location.href='index.html'">
+                <div class="bg-red-600 text-white p-2.5 rounded-2xl shadow-md flex items-center justify-center">
+                    <i class="fa-solid fa-shield-halved text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-black tracking-tight text-gray-900 block leading-none">Grupo Scout 13</span>
+                    <span class="text-xs font-semibold text-red-600 tracking-widest uppercase mt-1 block">Eloy Alfaro</span>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm">
+                <a href="index.html" class="text-gray-700 hover:text-red-600 transition">Inicio</a>
+                <a href="historia.html" class="text-gray-700 hover:text-red-600 transition">Historia</a>
+                <a href="canciones.html" class="text-gray-700 hover:text-red-600 transition flex items-center space-x-1">
+                    <i class="fa-solid fa-music text-red-600 mr-1"></i> Canciones
+                </a>
+                <a href="galeria.html" class="text-red-600 font-bold transition flex items-center space-x-1">
+                    <i class="fa-solid fa-images text-red-600 mr-1"></i> Fotos y Videos
+                </a>
+                <a href="museo.html" class="text-gray-700 hover:text-red-600 transition">Museo & Logros</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido Principal: Galería -->
+    <main class="max-w-6xl mx-auto px-4 py-12">
+        <div class="text-center mb-12">
+            <span class="bg-red-100 text-red-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Nuestros Recuerdos</span>
+            <h1 class="text-3xl sm:text-4xl font-black text-gray-900 mt-3">Galería Multimedia</h1>
+            <p class="text-gray-600 mt-2">Momentos inolvidables de campamentos, actividades y servicio en comunidad.</p>
+        </div>
+
+        <!-- Cuadrícula de la Galería -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Elemento 1 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 transition hover:shadow-md">
+                <div class="h-48 bg-gray-200 flex items-center justify-center relative">
+                    <i class="fa-solid fa-image text-4xl text-gray-400"></i>
+                    <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2.5 py-1 rounded-lg backdrop-blur-sm">Campamento</span>
+                </div>
+                <div class="p-5">
+                    <h2 class="font-bold text-gray-900 text-lg">Campamento Renacer</h2>
+                    <p class="text-gray-600 text-sm mt-1">Convivencia al aire libre y actividades de patrulla.</p>
+                </div>
+            </div>
+
+            <!-- Elemento 2 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 transition hover:shadow-md">
+                <div class="h-48 bg-gray-200 flex items-center justify-center relative">
+                    <i class="fa-solid fa-image text-4xl text-gray-400"></i>
+                    <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2.5 py-1 rounded-lg backdrop-blur-sm">Actividades</span>
+                </div>
+                <div class="p-5">
+                    <h2 class="font-bold text-gray-900 text-lg">Reuniones de Sábado</h2>
+                    <p class="text-gray-600 text-sm mt-1">Nudos, pionerismo y formación en valores scouts.</p>
+                </div>
+            </div>
+
+            <!-- Elemento 3 -->
+            <div class="bg-white rounded-2xl overflow-hidden shadow-sm border border-gray-100 transition hover:shadow-md">
+                <div class="h-48 bg-gray-200 flex items-center justify-center relative">
+                    <i class="fa-solid fa-image text-4xl text-gray-400"></i>
+                    <span class="absolute top-3 right-3 bg-black/60 text-white text-xs px-2.5 py-1 rounded-lg backdrop-blur-sm">Comunidad</span>
+                </div>
+                <div class="p-5">
+                    <h2 class="font-bold text-gray-900 text-lg">Servicio Social</h2>
+                    <p class="text-gray-600 text-sm mt-1">Trabajando por un mundo mejor en nuestra localidad.</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-16 text-center text-sm">
+        <p>Grupo Scout #13 Eloy Alfaro &copy; 2026 - Siempre Listos para Servir</p>
+    </footer>
+
+</body>
+</html>

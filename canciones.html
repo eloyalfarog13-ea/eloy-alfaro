@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cancionero Scout - Grupo Scout #13 Eloy Alfaro</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header / Menú de Navegación -->
+    <header class="bg-white/90 backdrop-blur-md sticky top-0 z-50 border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3 cursor-pointer" onclick="window.location.href='index.html'">
+                <div class="bg-red-600 text-white p-2.5 rounded-2xl shadow-md flex items-center justify-center">
+                    <i class="fa-solid fa-shield-halved text-xl"></i>
+                </div>
+                <div>
+                    <span class="text-xl font-black tracking-tight text-gray-900 block leading-none">Grupo Scout 13</span>
+                    <span class="text-xs font-semibold text-red-600 tracking-widest uppercase mt-1 block">Eloy Alfaro</span>
+                </div>
+            </div>
+
+            <nav class="hidden md:flex items-center space-x-8 font-medium text-sm">
+                <a href="index.html" class="text-gray-700 hover:text-red-600 transition">Inicio</a>
+                <a href="historia.html" class="text-gray-700 hover:text-red-600 transition">Historia</a>
+                <a href="canciones.html" class="text-red-600 font-bold transition flex items-center space-x-1">
+                    <i class="fa-solid fa-music text-red-600 mr-1"></i> Canciones
+                </a>
+                <a href="galeria.html" class="text-gray-700 hover:text-red-600 transition">Fotos y Videos</a>
+                <a href="museo.html" class="text-gray-700 hover:text-red-600 transition">Museo & Logros</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido Principal: Cancionero -->
+    <main class="max-w-4xl mx-auto px-4 py-12">
+        <div class="text-center mb-10">
+            <span class="bg-red-100 text-red-700 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Fogatas y Tradición</span>
+            <h1 class="text-3xl sm:text-4xl font-black text-gray-900 mt-3">Cancionero Scout</h1>
+            <p class="text-gray-600 mt-2">El espíritu del Grupo #13 Eloy Alfaro también se vive cantando en cada campamento.</p>
+        </div>
+
+        <!-- Lista de Canciones -->
+        <div class="space-y-6">
+            
+            <!-- Canción 1 -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8">
+                <div class="flex items-center justify-between border-b pb-4 mb-4">
+                    <h2 class="text-xl font-bold text-gray-900 flex items-center">
+                        <i class="fa-solid fa-guitar text-red-600 mr-2"></i> Himno de la Alegría
+                    </h2>
+                    <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-lg font-medium">Tradicional Scout</span>
+                </div>
+                <div class="text-gray-700 space-y-2 text-sm leading-relaxed whitespace-pre-line font-normal bg-gray-50 p-4 rounded-xl border border-gray-100">
+Escucha hermano la canción de la alegría,
+el canto alegre del que espera un nuevo día.
+
+Ven, canta, sueña cantando,
+vive soñando el nuevo sol,
+en que los hombres volverán a ser hermanos.
+                </div>
+            </div>
+
+            <!-- Canción 2 -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 md:p-8">
+                <div class="flex items-center justify-between border-b pb-4 mb-4">
+                    <h2 class="text-xl font-bold text-gray-900 flex items-center">
+                        <i class="fa-solid fa-guitar text-red-600 mr-2"></i> La Flor de Lis
+                    </h2>
+                    <span class="text-xs bg-gray-100 text-gray-600 px-2.5 py-1 rounded-lg font-medium">Símbolo Scout</span>
+                </div>
+                <div class="text-gray-700 space-y-2 text-sm leading-relaxed whitespace-pre-line font-normal bg-gray-50 p-4 rounded-xl border border-gray-100">
+Llevo en el pecho bordada una flor,
+que es símbolo fiel de constancia y honor.
+Guía mis pasos con luz de hermandad,
+rumbo al servicio, la fe y la verdad.
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 mt-16 text-center text-sm">
+        <p>Grupo Scout #13 Eloy Alfaro &copy; 2026 - Siempre Listos para Servir</p>
+    </footer>
+
+</body>
+</html>
