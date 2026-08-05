@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Historia y Trayectoria | Grupo Scout #13 "Eloy Alfaro"</title>
+    <title>Grupo Scout #13 "Eloy Alfaro" | Guayaquil</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- FontAwesome Icons -->
@@ -35,7 +35,7 @@
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
         .hero-bg {
-            background: linear-gradient(135deg, rgba(17, 24, 39, 0.88), rgba(153, 27, 27, 0.78)), url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1600&auto=format&fit=crop');
+            background: linear-gradient(135deg, rgba(17, 24, 39, 0.85), rgba(153, 27, 27, 0.75)), url('https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1600&auto=format&fit=crop');
             background-size: cover;
             background-position: center;
         }
@@ -46,6 +46,7 @@
     <header class="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-md shadow-md border-b-4 border-red-600">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
+                <!-- Logo & Title -->
                 <div class="flex items-center space-x-3">
                     <img src="https://placehold.co/100x100/DC2626/FFFFFF?text=G13" onerror="this.src='https://placehold.co/100x100/DC2626/FFFFFF?text=G13'" alt="Logo Grupo 13" class="w-12 h-12 rounded-full object-cover border-2 border-black shadow">
                     <div>
@@ -54,15 +55,17 @@
                     </div>
                 </div>
 
+                <!-- Desktop Nav Links (Multi-page independent links) -->
                 <nav class="hidden md:flex items-center space-x-8 font-medium text-sm">
-                    <a href="index.html" class="text-gray-700 hover:text-red-600 transition">Inicio</a>
-                    <a href="historia.html" class="text-red-600 font-bold transition">Historia</a>
+                    <a href="index.html" class="text-red-600 font-bold transition">Inicio</a>
+                    <a href="historia.html" class="text-gray-700 hover:text-red-600 transition">Historia</a>
                     <a href="canciones.html" class="text-gray-700 hover:text-red-600 transition flex items-center space-x-1"><i class="fa-solid fa-music text-red-600 mr-1"></i> Canciones</a>
                     <a href="galeria.html" class="text-gray-700 hover:text-red-600 transition">Fotos y Videos</a>
                     <a href="museo.html" class="text-gray-700 hover:text-red-600 transition">Museo & Logros</a>
                     <a href="contacto.html" class="bg-red-600 text-white px-4 py-2 rounded-xl shadow hover:bg-red-700 transition font-semibold">¡Únete!</a>
                 </nav>
 
+                <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-btn" class="text-gray-700 hover:text-red-600 focus:outline-none p-2">
                         <i class="fa-solid fa-bars text-2xl"></i>
@@ -71,9 +74,10 @@
             </div>
         </div>
 
+        <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-200 px-4 pt-2 pb-4 space-y-2">
-            <a href="index.html" class="block py-2 text-gray-700 hover:text-red-600 font-medium">Inicio</a>
-            <a href="historia.html" class="block py-2 text-red-600 font-bold">Historia</a>
+            <a href="index.html" class="block py-2 text-red-600 font-bold">Inicio</a>
+            <a href="historia.html" class="block py-2 text-gray-700 hover:text-red-600 font-medium">Historia</a>
             <a href="canciones.html" class="block py-2 text-gray-700 hover:text-red-600 font-medium flex items-center"><i class="fa-solid fa-music text-red-600 mr-2"></i> Canciones Scouts</a>
             <a href="galeria.html" class="block py-2 text-gray-700 hover:text-red-600 font-medium">Fotos y Videos</a>
             <a href="museo.html" class="block py-2 text-gray-700 hover:text-red-600 font-medium">Museo & Logros</a>
@@ -81,103 +85,61 @@
         </div>
     </header>
 
-    <section class="pt-28 pb-16 md:pt-36 md:pb-24 text-white relative hero-bg">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 space-y-4">
-            <span class="bg-red-700 text-white text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-full border border-red-500">Legado Scout • Desde 1982</span>
-            <h1 class="text-4xl sm:text-5xl font-heading font-black tracking-tight">Nuestra Historia y Trayectoria</h1>
-            <p class="text-lg text-gray-200 max-w-2xl mx-auto">
-                Cuarenta años de hermandad, liderazgo juvenil, servicio a la comunidad y vivencia de los valores del escultismo en Guayaquil.
-            </p>
+    <section class="pt-28 pb-20 md:pt-36 md:pb-32 text-white relative hero-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                <div class="space-y-6">
+                    <div class="inline-flex items-center space-x-2 bg-red-700/80 text-white px-3.5 py-1.5 rounded-full text-xs font-semibold tracking-wider uppercase border border-red-500">
+                        <i class="fa-solid fa-fire text-yellow-300"></i>
+                        <span>Fundado en 1982 • Guayaquil</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-heading font-black tracking-tight leading-none">
+                        Grupo Scout #13 <span class="text-red-400">“Eloy Alfaro”</span>
+                    </h1>
+                    <p class="text-lg text-gray-200 leading-relaxed">
+                        Formando líderes íntegros, solidarios y comprometidos con la naturaleza y la sociedad. ¡Siempre Listos para Servir! ⚜️🏕️
+                    </p>
+                    
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <a href="contacto.html" class="bg-red-600 hover:bg-red-700 text-white font-bold px-6 py-3.5 rounded-xl shadow-lg transition flex items-center space-x-2">
+                            <i class="fa-solid fa-compass"></i>
+                            <span>Únete al Grupo</span>
+                        </a>
+                        <a href="historia.html" class="bg-white/10 hover:bg-white/20 text-white border border-white/30 font-bold px-6 py-3.5 rounded-xl transition flex items-center space-x-2">
+                            <i class="fa-solid fa-book-open"></i>
+                            <span>Nuestra Historia</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Info Card -->
+                <div class="bg-white text-gray-900 rounded-3xl p-6 sm:p-8 neckerchief-border shadow-2xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-red-50 rounded-full -mr-16 -mt-16 pointer-events-none"></div>
+                    <h3 class="text-xl font-heading font-bold mb-4 text-gray-900 flex items-center">
+                        <i class="fa-solid fa-circle-info text-red-600 mr-2"></i> Ficha de Identidad
+                    </h3>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex justify-between border-b pb-2">
+                            <span class="font-semibold text-gray-600"><i class="fa-solid fa-shield-halved text-red-600 mr-1"></i> Pañoleta:</span>
+                            <span class="font-bold text-gray-900">#13 (Rojo, Blanco y Negro)</span>
+                        </li>
+                        <li class="flex justify-between border-b pb-2">
+                            <span class="font-semibold text-gray-600"><i class="fa-solid fa-location-dot text-red-600 mr-1"></i> Sede / Reunión:</span>
+                            <span class="text-right font-medium">Centro Cívico (Calle Guaranda)</span>
+                        </li>
+                        <li class="flex justify-between border-b pb-2">
+                            <span class="font-semibold text-gray-600"><i class="fa-solid fa-calendar-days text-red-600 mr-1"></i> Días y Horas:</span>
+                            <span class="font-medium">Domingos 09H00 a 13H00</span>
+                        </li>
+                        <li class="flex justify-between pt-1">
+                            <span class="font-semibold text-gray-600"><i class="fa-solid fa-user-tie text-red-600 mr-1"></i> Jefe de Grupo:</span>
+                            <span class="font-bold text-red-700">M.Sc. Jorge Campoverde Mori</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </section>
-
-    <main class="py-16 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-        <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-gray-100 space-y-6">
-            <h2 class="text-2xl sm:text-3xl font-heading font-black text-gray-900 flex items-center">
-                <i class="fa-solid fa-book-bookmark text-red-600 mr-3"></i> Orígenes y Fundación (1982)
-            </h2>
-            <p class="text-gray-700 leading-relaxed text-base sm:text-lg">
-                El Grupo Scout #13 “Eloy Alfaro” de la ciudad de Guayaquil forma parte entrañable de la historia del escultismo local, desarrollando a lo largo de su trayectoria una labor orientada a la formación integral de niños, niñas, adolescentes y jóvenes, basada firmemente en los principios y valores del Movimiento Scout mundial.
-            </p>
-            <p class="text-gray-700 leading-relaxed text-base sm:text-lg">
-                El grupo adoptó con orgullo el nombre de <strong>“Eloy Alfaro”</strong> en homenaje al ilustre prócer ecuatoriano, cuya figura representa valores cívicos como la libertad, la justicia, el liderazgo, la perseverancia y el servicio a la patria, recordando también el Colegio Fiscal Experimental Eloy Alfaro donde dieron sus primeros pasos e iniciaron sus actividades formales.
-            </p>
-            <div class="bg-red-50 border-l-4 border-red-600 p-4 rounded-r-xl">
-                <p class="text-sm text-red-900 font-medium italic">
-                    "En el año 1982, los hermanos Jorge y Julio Campoverde, exintegrantes del Grupo Scout #4 Presidente Alfaro, impulsados por el espíritu scout, emprendieron el reto de fundar un nuevo espacio educativo."
-                </p>
-            </div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 space-y-4">
-                <div class="w-12 h-12 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center text-xl font-bold">
-                    <i class="fa-solid fa-users"></i>
-                </div>
-                <h3 class="text-xl font-heading font-bold text-gray-900">Forjadores y Pioneros</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">
-                    Contaron desde el inicio con el valioso apoyo de los hermanos Vicente y Joselito Carpio (+), los hermanos Joselito y Rafael Correa, y el compañero Magno Galarza, además del respaldo decisivo del Vicerrector y amigo <strong>Ab. Elías Sánchez Estrada (+)</strong>.
-                </p>
-                <div class="pt-2 text-xs font-semibold text-red-600">Primer Jefe de Grupo: Ing. Ricardo Jara Balvín</div>
-            </div>
-
-            <div class="bg-white rounded-3xl p-8 shadow-xl border border-gray-100 space-y-4">
-                <div class="w-12 h-12 bg-red-100 text-red-600 rounded-2xl flex items-center justify-center text-xl font-bold">
-                    <i class="fa-solid fa-hands-holding-child"></i>
-                </div>
-                <h3 class="text-xl font-heading font-bold text-gray-900">Momentos Cumbres y Tradiciones</h3>
-                <p class="text-gray-600 text-sm leading-relaxed">
-                    Las primeras ceremonias de Investidura y Promesa Scout en los patios del plantel marcaron época. Entre nuestras tradiciones destacan las fogatas de fin de año, integración carnavalera, Día del Lobato y participación activa en el Día del Bombero.
-                </p>
-                <div class="pt-2 text-xs font-semibold text-red-600">Lema permanente: ¡Siempre Listos para Servir! ⚜️🏕️</div>
-            </div>
-        </div>
-
-        <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-gray-100 space-y-8">
-            <div class="text-center max-w-xl mx-auto space-y-2">
-                <h2 class="text-2xl sm:text-3xl font-heading font-black text-gray-900">Cuadro Dirigencial Actual</h2>
-                <p class="text-gray-600 text-sm">Líderes comprometidos con la formación de las nuevas generaciones.</p>
-            </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200 text-center space-y-2">
-                    <div class="w-14 h-14 bg-red-600 text-white rounded-full flex items-center justify-center mx-auto text-xl shadow"><i class="fa-solid fa-user-tie"></i></div>
-                    <h4 class="font-bold text-gray-900 text-lg">M.Sc. Jorge Campoverde Mori</h4>
-                    <span class="text-xs bg-red-100 text-red-700 px-2.5 py-1 rounded-full font-semibold inline-block">Jefe de Grupo</span>
-                </div>
-
-                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200 text-center space-y-2">
-                    <div class="w-14 h-14 bg-gray-900 text-white rounded-full flex items-center justify-center mx-auto text-xl shadow"><i class="fa-solid fa-user-shield"></i></div>
-                    <h4 class="font-bold text-gray-900 text-lg">Lic. Lucila Corrales Morán</h4>
-                    <span class="text-xs bg-gray-200 text-gray-800 px-2.5 py-1 rounded-full font-semibold inline-block">Subjefa de Grupo</span>
-                </div>
-
-                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200 text-center space-y-2">
-                    <div class="w-14 h-14 bg-red-600 text-white rounded-full flex items-center justify-center mx-auto text-xl shadow"><i class="fa-solid fa-compass"></i></div>
-                    <h4 class="font-bold text-gray-900 text-lg">Tnlgo. Ivan Nivela Pacheco</h4>
-                    <span class="text-xs bg-red-100 text-red-700 px-2.5 py-1 rounded-full font-semibold inline-block">Unidad Tropa</span>
-                </div>
-
-                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200 text-center space-y-2">
-                    <div class="w-14 h-14 bg-gray-900 text-white rounded-full flex items-center justify-center mx-auto text-xl shadow"><i class="fa-solid fa-fire"></i></div>
-                    <h4 class="font-bold text-gray-900 text-lg">Ing. Jorge Campoverde Corrales</h4>
-                    <span class="text-xs bg-gray-200 text-gray-800 px-2.5 py-1 rounded-full font-semibold inline-block">Unidad Caminante</span>
-                </div>
-
-                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200 text-center space-y-2">
-                    <div class="w-14 h-14 bg-red-600 text-white rounded-full flex items-center justify-center mx-auto text-xl shadow"><i class="fa-solid fa-hands-holding"></i></div>
-                    <h4 class="font-bold text-gray-900 text-lg">Psic. Angie Sánchez Huacón</h4>
-                    <span class="text-xs bg-red-100 text-red-700 px-2.5 py-1 rounded-full font-semibold inline-block">Dirigente y Colaboradora</span>
-                </div>
-
-                <div class="bg-gray-50 p-6 rounded-2xl border border-gray-200 text-center space-y-2">
-                    <div class="w-14 h-14 bg-gray-900 text-white rounded-full flex items-center justify-center mx-auto text-xl shadow"><i class="fa-solid fa-people-group"></i></div>
-                    <h4 class="font-bold text-gray-900 text-lg">Ing. Lizzette Campoverde Corrales</h4>
-                    <span class="text-xs bg-gray-200 text-gray-800 px-2.5 py-1 rounded-full font-semibold inline-block">Dirigente y Colaboradora</span>
-                </div>
-            </div>
-        </div>
-    </main>
 
     <footer class="bg-gray-900 text-white py-12 border-t-4 border-red-600">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
