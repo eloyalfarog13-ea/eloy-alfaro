@@ -150,18 +150,29 @@
 
         <!-- Photos Section -->
         <div class="space-y-6">
-            <div class="flex items-center justify-between border-b pb-4">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b pb-4 gap-4">
                 <h2 class="text-2xl font-heading font-black text-gray-900 flex items-center">
                     <i class="fa-solid fa-images text-red-600 mr-3"></i> Álbum de Fotos
                 </h2>
-                <span class="text-xs text-gray-500 bg-gray-100 px-3 py-1 rounded-full font-medium">Recuerdos</span>
+                <!-- Category Filter Buttons -->
+                <div class="flex flex-wrap gap-2 text-xs font-semibold">
+                    <button onclick="filterPhotos('all')" id="filter-all" class="px-3.5 py-1.5 rounded-full bg-red-600 text-white transition shadow">Todos</button>
+                    <button onclick="filterPhotos('campamento')" id="filter-campamento" class="px-3.5 py-1.5 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition">Campamentos</button>
+                    <button onclick="filterPhotos('actividad')" id="filter-actividad" class="px-3.5 py-1.5 rounded-full bg-gray-200 text-gray-700 hover:text-gray-300 transition">Actividades</button>
+                    <button onclick="filterPhotos('comunidad')" id="filter-comunidad" class="px-3.5 py-1.5 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition">Comunidad</button>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 group">
+            <!-- Photos Grid (Multiple Photos) -->
+            <div id="photos-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+                <!-- Photo 1 -->
+                <div class="photo-card bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 group cursor-pointer" data-category="campamento" onclick="openLightbox('https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1200&auto=format&fit=crop', 'Campamento Renacer', 'Convivencia al aire libre y actividades de patrulla.')">
                     <div class="h-56 bg-gray-200 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=800&auto=format&fit=crop" onerror="this.src='https://placehold.co/600x400/DC2626/FFFFFF?text=Campamento'" alt="Campamento" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=800&auto=format&fit=crop" onerror="this.src='https://placehold.co/600x400/DC2626/FFFFFF?text=Campamento'" alt="Campamento Renacer" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
                         <span class="absolute top-3 right-3 bg-gray-900/80 text-white text-xs px-2.5 py-1 rounded-full backdrop-blur">Campamento</span>
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
+                            <i class="fa-solid fa-expand text-2xl"></i>
+                        </div>
                     </div>
                     <div class="p-6 space-y-2">
                         <h3 class="font-heading font-bold text-lg text-gray-900">Campamento Renacer</h3>
@@ -169,10 +180,14 @@
                     </div>
                 </div>
 
-                <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 group">
+                <!-- Photo 2 -->
+                <div class="photo-card bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 group cursor-pointer" data-category="actividad" onclick="openLightbox('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=1200&auto=format&fit=crop', 'Reuniones de Sábado / Domingo', 'Nudos, pionerismo y formación en valores scouts.')">
                     <div class="h-56 bg-gray-200 overflow-hidden relative">
-                        <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=800&auto=format&fit=crop" onerror="this.src='https://placehold.co/600x400/DC2626/FFFFFF?text=Reuniones'" alt="Reuniones" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=800&auto=format&fit=crop" onerror="this.src='https://placehold.co/600x400/DC2626/FFFFFF?text=Reuniones'" alt="Reuniones de Sábado" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
                         <span class="absolute top-3 right-3 bg-gray-900/80 text-white text-xs px-2.5 py-1 rounded-full backdrop-blur">Actividades</span>
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
+                            <i class="fa-solid fa-expand text-2xl"></i>
+                        </div>
                     </div>
                     <div class="p-6 space-y-2">
                         <h3 class="font-heading font-bold text-lg text-gray-900">Reuniones de Sábado / Domingo</h3>
@@ -180,20 +195,89 @@
                     </div>
                 </div>
 
-                <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 group">
+                <!-- Photo 3 -->
+                <div class="photo-card bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 group cursor-pointer" data-category="comunidad" onclick="openLightbox('https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=1200&auto=format&fit=crop', 'Servicio Social', 'Trabajando por un mundo mejor en nuestra localidad.')">
                     <div class="h-56 bg-gray-200 overflow-hidden relative">
                         <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?q=80&w=800&auto=format&fit=crop" onerror="this.src='https://placehold.co/600x400/DC2626/FFFFFF?text=Servicio'" alt="Servicio Social" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
                         <span class="absolute top-3 right-3 bg-gray-900/80 text-white text-xs px-2.5 py-1 rounded-full backdrop-blur">Comunidad</span>
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
+                            <i class="fa-solid fa-expand text-2xl"></i>
+                        </div>
                     </div>
                     <div class="p-6 space-y-2">
                         <h3 class="font-heading font-bold text-lg text-gray-900">Servicio Social</h3>
                         <p class="text-gray-600 text-sm">Trabajando por un mundo mejor en nuestra localidad.</p>
                     </div>
                 </div>
+
+                <!-- Photo 4 -->
+                <div class="photo-card bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 group cursor-pointer" data-category="campamento" onclick="openLightbox('https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=1200&auto=format&fit=crop', 'Fogata de Hermandad', 'Nuestra tradicional fogata nocturna bajo las estrellas.')">
+                    <div class="h-56 bg-gray-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?q=80&w=800&auto=format&fit=crop" onerror="this.src='https://placehold.co/600x400/DC2626/FFFFFF?text=Fogata'" alt="Fogata" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <span class="absolute top-3 right-3 bg-gray-900/80 text-white text-xs px-2.5 py-1 rounded-full backdrop-blur">Campamento</span>
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
+                            <i class="fa-solid fa-expand text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-2">
+                        <h3 class="font-heading font-bold text-lg text-gray-900">Fogata de Hermandad</h3>
+                        <p class="text-gray-600 text-sm">Nuestra tradicional fogata nocturna bajo las estrellas.</p>
+                    </div>
+                </div>
+
+                <!-- Photo 5 -->
+                <div class="photo-card bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 group cursor-pointer" data-category="actividad" onclick="openLightbox('https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=1200&auto=format&fit=crop', 'Ceremonia de Promesa', 'Instante solemne de investidura y entrega de pañoletas.')">
+                    <div class="h-56 bg-gray-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=800&auto=format&fit=crop" onerror="this.src='https://placehold.co/600x400/DC2626/FFFFFF?text=Promesa'" alt="Promesa" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <span class="absolute top-3 right-3 bg-gray-900/80 text-white text-xs px-2.5 py-1 rounded-full backdrop-blur">Actividades</span>
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
+                            <i class="fa-solid fa-expand text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-2">
+                        <h3 class="font-heading font-bold text-lg text-gray-900">Ceremonia de Promesa</h3>
+                        <p class="text-gray-600 text-sm">Instante solemne de investidura y entrega de pañoletas.</p>
+                    </div>
+                </div>
+
+                <!-- Photo 6 -->
+                <div class="photo-card bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 group cursor-pointer" data-category="comunidad" onclick="openLightbox('https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?q=80&w=1200&auto=format&fit=crop', 'Reforestación y Ecología', 'Jóvenes scouts cuidando el medio ambiente en Guayaquil.')">
+                    <div class="h-56 bg-gray-200 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1531206715517-5c0ba140b2b8?q=80&w=800&auto=format&fit=crop" onerror="this.src='https://placehold.co/600x400/DC2626/FFFFFF?text=Ecologia'" alt="Ecología" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        <span class="absolute top-3 right-3 bg-gray-900/80 text-white text-xs px-2.5 py-1 rounded-full backdrop-blur">Comunidad</span>
+                        <div class="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition flex items-center justify-center text-white">
+                            <i class="fa-solid fa-expand text-2xl"></i>
+                        </div>
+                    </div>
+                    <div class="p-6 space-y-2">
+                        <h3 class="font-heading font-bold text-lg text-gray-900">Reforestación y Ecología</h3>
+                        <p class="text-gray-600 text-sm">Jóvenes scouts cuidando el medio ambiente en Guayaquil.</p>
+                    </div>
+                </div>
             </div>
         </div>
 
     </main>
+
+    <!-- Lightbox Modal for Photo View -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 bg-black/90 hidden items-center justify-center p-4">
+        <button onclick="closeLightbox()" class="absolute top-6 right-6 text-white text-3xl bg-black/50 w-12 h-12 rounded-full flex items-center justify-center hover:bg-red-600 transition">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <div class="max-w-4xl w-full bg-gray-900 rounded-3xl overflow-hidden shadow-2xl border border-gray-800 flex flex-col md:flex-row">
+            <div class="md:w-2/3 bg-black flex items-center justify-center p-2">
+                <img id="lightbox-img" src="" alt="Ampliada" class="max-h-[75vh] object-contain rounded-xl">
+            </div>
+            <div class="md:w-1/3 p-8 flex flex-col justify-center space-y-4 text-white">
+                <span class="text-xs font-bold uppercase tracking-wider text-red-400 bg-red-950 px-3 py-1 rounded-full self-start">Grupo Scout #13</span>
+                <h3 id="lightbox-title" class="text-2xl font-heading font-bold">Título de la Foto</h3>
+                <p id="lightbox-desc" class="text-gray-300 text-sm leading-relaxed">Descripción detallada del momento scout.</p>
+                <div class="pt-4 text-xs text-gray-400 border-t border-gray-800">
+                    📸 Fotografía del Archivo Histórico
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer class="bg-gray-900 text-white py-12 border-t-4 border-red-600">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
@@ -216,6 +300,49 @@
         mobileMenuBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
         });
+
+        // Filter Photos Function
+        function filterPhotos(category) {
+            const cards = document.querySelectorAll('.photo-card');
+            const buttons = ['all', 'campamento', 'actividad', 'comunidad'];
+            
+            buttons.forEach(btn => {
+                const el = document.getElementById(`filter-${btn}`);
+                if (btn === category) {
+                    el.className = "px-3.5 py-1.5 rounded-full bg-red-600 text-white transition shadow";
+                } else {
+                    el.className = "px-3.5 py-1.5 rounded-full bg-gray-200 text-gray-700 hover:bg-gray-300 transition";
+                }
+            });
+
+            cards.forEach(card => {
+                if (category === 'all' || card.getAttribute('data-category') === category) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Lightbox Functions
+        function openLightbox(imgSrc, title, desc) {
+            const modal = document.getElementById('lightbox-modal');
+            const img = document.getElementById('lightbox-img');
+            const titleEl = document.getElementById('lightbox-title');
+            const descEl = document.getElementById('lightbox-desc');
+
+            img.src = imgSrc;
+            titleEl.innerText = title;
+            descEl.innerText = desc;
+            modal.classList.remove('hidden');
+            modal.classList.add('flex');
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightbox-modal');
+            modal.classList.remove('flex');
+            modal.classList.add('hidden');
+        }
     </script>
 </body>
 </html>
